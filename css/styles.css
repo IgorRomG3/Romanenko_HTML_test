@@ -1,0 +1,175 @@
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+.menu li {
+	background-color: blue;
+}
+
+.menu > li {
+	float: left;
+	border: 1px solid #fff;
+	display: block;
+	padding: 10px;
+	position: relative;
+}
+
+.menu > li:last-child > ul {
+	left: inherit;
+    right: 0;
+}
+
+.parent > ul {
+	width: 150px;
+	top: 100%;
+	left: 0;
+	position: absolute;
+	display: none;
+}
+
+.parent:hover > ul {
+	display: block;
+}
+
+.parent > ul > li {
+	padding: 10px;
+}
+
+.menu li ul>li {
+	position: relative;
+}
+
+.menu li > ul li ul {
+	width: 170px;
+	position: absolute;
+	top: 0%;
+	left: 100%;
+}
+
+@media only screen and (max-width:1115px) {
+	.menu li:last-child > ul li ul {
+		left: -113%;
+	}
+}
+
+@media only screen and (max-width:890px) {
+	.menu > li {
+		width: 80px;
+	}
+}
+
+@media only screen and (max-width:644px) {
+	a {
+		font-size: 12px;
+	}
+	.menu > li {
+		width: 60px;
+	}
+}
+
+@media only screen and (max-width:500px) {
+	a {
+		font-size: 14px;
+		width: 100%;
+		display: block;
+	}
+	.menu>li{
+		float: none;
+		display: block;
+		width: 100%;
+	}
+
+	.parent > ul,
+	.menu li > ul li ul,
+	.menu li:last-child > ul li ul {
+	 	width: 100%;
+		position: relative;
+		max-height: 0;
+		left: 0 !important;
+		overflow: hidden;
+	}
+	
+	.toggle-menu {
+		max-height: 500px !important;
+	}
+}
+
+/* Slick */
+
+.slick-slide {
+	text-align: center;
+}
+
+.slick-prev {
+	left: 0;
+}
+
+.slick-next {
+	right: 0;
+}
+
+.slick-prev,
+.slick-next {
+	z-index: 10;
+}
+
+.slick-prev:before, 
+.slick-next:before {
+	opacity: 1;
+	color: #000;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+.item-name,
+.item-description {
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slick-slide {
+	position: relative;
+}
+
+@media only screen and (max-width: 500px) {
+	.slick-prev,
+	.slick-next {
+		display: none !important;
+	}
+}
